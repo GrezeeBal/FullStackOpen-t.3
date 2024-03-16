@@ -1,2 +1,2 @@
 # FullStackOpen-t.3
-Osa 3 | Tehtävä 3 | puhelinluettelon backend
+Osa 3 | Kurssin materiaali. Vaihda branch teht3:een
