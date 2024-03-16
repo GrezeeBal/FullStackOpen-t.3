@@ -17,6 +17,11 @@ let notes = [
     id: 3,
     content: "THIRD NOTE",
     important: true
+  },
+  {
+    id: 4,
+    content: "SOME NOTE",
+    important: true
   }
 ]
 
