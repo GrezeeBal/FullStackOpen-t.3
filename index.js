@@ -3,9 +3,15 @@ const express = require('express')
 const morgan = require('morgan')
 const app = express()
 
+// new token for morgan() middleware
 morgan.token('body', (req, res) => {
   return JSON.stringify(req.body)
 })
+
+// new middleware for unknownEndPoint
+const unknownEndpoint = (request, response) => {
+  response.status(404).send({ error: 'unknown endpoint' })
+}
 
 let persons = [
   {
@@ -121,6 +127,8 @@ app.delete('/api/persons/:id', (req, res) => {
 
   res.status(204).end()
 })
+
+app.use(unknownEndpoint)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
